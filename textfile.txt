@@ -1,0 +1,9 @@
+/* Add this to any project */
+.hero {
+    animation: fade 2s ease-in;
+}
+
+@keyframes fade {
+    from {opacity:0;}
+    to {opacity:1;}
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background: #222;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    background: #eee;
+    padding: 20px;
+}
+
+.charts {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.chart {
+    background: #ddd;
+    height: 200px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <p>Home</p>
+        <p>Analytics</p>
+    </div>
+
+    <div class="main">
+        <h1>Overview</h1>
+
+        <div class="cards">
+            <div class="card">Users</div>
+            <div class="card">Revenue</div>
+            <div class="card">Sales</div>
+        </div>
+
+        <div class="charts">
+            <div class="chart">Chart 1</div>
+            <div class="chart">Chart 2</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
