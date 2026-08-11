@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="chat"></div>
+<input id="msg">
+<button onclick="send()">Send</button>
+
+<script>
+function send(){
+    let msg = document.getElementById("msg").value;
+    chat.innerHTML += "<p>"+msg+"</p>";
+}
+</script>
+
+</body>
+</html>
