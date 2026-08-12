@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <title>Image Slider</title>
+<body>
+
+<h2>Slider Test</h2>
+
+<img id="img" width="300" alt="image will appear here">
+
+<br><br>
+
+<button onclick="prev()">Prev</button>
+<button onclick="next()">Next</button>
+
+<script>
+let images = [
+ "https://picsum.photos/id/1015/300/200",
+ "https://picsum.photos/id/1016/300/200",
+ "https://picsum.photos/id/1018/300/200"
+];
+
+let i = 0;
+
+// ✅ Correctly define img
+let img = document.getElementById("img");
+
+// ✅ Set first image AFTER loading
+window.onload = function() {
+    img.src = images[i];
+};
+
+function next(){
+    i = (i + 1) % images.length;
+    img.src = images[i];
+}
+
+function prev(){
+    i = (i - 1 + images.length) % images.length;
+    img.src = images[i];
+}
+</script>
+
+</body>
+</html>

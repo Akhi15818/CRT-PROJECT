@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quiz App</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#next {
+    background: #007BFF;
+    color: white;
+}
+</style>
+
+</head>
+<body>
+
+<div class="quiz">
+    <h2 id="question">Question</h2>
+
+    <button onclick="check(0)" id="a"></button>
+    <button onclick="check(1)" id="b"></button>
+    <button onclick="check(2)" id="c"></button>
+    <button onclick="check(3)" id="d"></button>
+
+    <button id="next" onclick="next()">Next</button>
+
+    <h3 id="score"></h3>
+</div>
+
+<script>
+let quiz = [
+    {
+        q: "2 + 2 = ?",
+        options: ["3", "4", "5", "6"],
+        answer: 1
+    },
+    {
+        q: "Capital of India?",
+        options: ["Mumbai", "Delhi", "Chennai", "Kolkata"],
+        answer: 1
+    },
+    {
+        q: "HTML stands for?",
+        options: ["Hyper Trainer", "HyperText Markup Language", "HighText", "None"],
+        answer: 1
+    }
+];
+
+let index = 0;
+let score = 0;
+
+function loadQuestion(){
+    let q = quiz[index];
+    document.getElementById("question").innerText = q.q;
+
+    document.getElementById("a").innerText = q.options[0];
+    document.getElementById("b").innerText = q.options[1];
+    document.getElementById("c").innerText = q.options[2];
+    document.getElementById("d").innerText = q.options[3];
+}
+
+function check(i){
+    if(i === quiz[index].answer){
+        score++;
+    }
+}
+
+function next(){
+    index++;
+    if(index < quiz.length){
+        loadQuestion();
+    } else {
+        document.querySelector(".quiz").innerHTML =
+            `<h2>Your Score: ${score}/${quiz.length}</h2>`;
+    }
+}
+
+loadQuestion();
+</script>
+
+</body>
+</html>

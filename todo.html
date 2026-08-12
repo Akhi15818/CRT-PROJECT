@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Todo</title>
+</head>
+<body>
+
+<input id="task">
+<button onclick="addTask()">Add</button>
+
+<ul id="list"></ul>
+
+<script>
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+function render(){
+    let list = document.getElementById("list");
+    list.innerHTML = "";
+    tasks.forEach((t,i)=>{
+        list.innerHTML += `<li>${t} <button onclick="del(${i})">X</button></li>`;
+    });
+}
+function addTask(){
+    let task = document.getElementById("task").value;
+    tasks.push(task);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    render();
+}
+function del(i){
+    tasks.splice(i,1);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    render();
+}
+render();
+</script>
+
+</body>
+</html>

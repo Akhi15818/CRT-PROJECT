@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Notes App</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.notes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.note {
+    background: white;
+    padding: 10px;
+    border-left: 5px solid #007BFF;
+    display: flex;
+    justify-content: space-between;
+}
+
+.note button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Notes App</h1>
+
+    <textarea id="input" placeholder="Write a note..."></textarea>
+    <button onclick="addNote()">Add Note</button>
+
+    <div id="notes" class="notes"></div>
+</div>
+
+<script>
+let notes = JSON.parse(localStorage.getItem("notes")) || [];
+
+function render(){
+    let container = document.getElementById("notes");
+    container.innerHTML = "";
+
+    notes.forEach((note, index) => {
+        container.innerHTML += `
+            <div class="note">
+                <span>${note}</span>
+                <button onclick="deleteNote(${index})">X</button>
+            </div>
+        `;
+    });
+}
+
+function addNote(){
+    let input = document.getElementById("input");
+    if(input.value.trim() === "") return;
+
+    notes.push(input.value);
+    localStorage.setItem("notes", JSON.stringify(notes));
+
+    input.value = "";
+    render();
+}
+
+function deleteNote(index){
+    notes.splice(index, 1);
+    localStorage.setItem("notes", JSON.stringify(notes));
+    render();
+}
+
+render();
+</script>
+
+</body>
+</html>
