@@ -1,0 +1,130 @@
+<!---task 5-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 5</title>
+</head>
+<body>
+  <h1>Media in HTML</h1>
+
+  <h2>Image</h2>
+  <img src="sample.jpg" alt="Sample Image" width="250">
+
+  <h2>YouTube Video</h2>
+  <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+    frameborder="0" allowfullscreen>
+  </iframe>
+
+  <h2>Webpage inside iFrame</h2>
+  <iframe src="https://www.wikipedia.org" width="600" height="400"></iframe>
+</body>
+</html>
+<!---task 6-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 6</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    th {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Table</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Course</th>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>20</td>
+      <td>Computer Science</td>
+    </tr>
+    <tr>
+      <td>Alice</td>
+      <td>21</td>
+      <td>Mathematics</td>
+    </tr>
+    <tr>
+      <td>David</td>
+      <td>22</td>
+      <td>Economics</td>
+    </tr>
+  </table>
+
+  <!-- Insert Image -->
+  <img src="table_example.png" alt="Sample Table Image" width="400">
+</body>
+</html>
+<!---task 7-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 7</title>
+  <style>
+    form {
+      width: 300px;
+      margin: auto;
+      padding: 15px;
+      border: 1px solid #333;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      background: blue;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>User Form</h1>
+  <form>
+    <label>Name:</label>
+    <input type="text" name="name" required>
+
+    <label>Age:</label>
+    <input type="number" name="age" required>
+
+    <label>Designation:</label>
+    <input type="text" name="designation">
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Password:</label>
+    <input type="password" name="pwd" required>
+
+    <label>Date of Birth:</label>
+    <input type="date" name="dob">
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Insert Image -->
+  <img src="form_icon.png" alt="Form Illustration" width="150">
+</body>
+</html>

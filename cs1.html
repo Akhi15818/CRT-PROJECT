@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css classes</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        /* we have the selectors to select the tag to apply the styles 
+
+        1. tag selector
+
+        2. class selector
+
+        3. id selector
+
+        4. univeral selector
+        
+        
+        */
+
+         div {
+
+            color: blue;
+            background-color: blueviolet;
+
+        } 
+
+
+        /* dot is telling to css it is a class selector, if u won't give the dot, it will consider as html tag */
+        .sadhik {
+
+            color: blue;
+            background-color: blueviolet;
+
+        }
+
+        /* # --- id specifier */
+
+        #unique {
+            color: rgb(200, 22, 144);
+            background-color: black;
+        }
+
+        * h2 {
+            color: rgb(164, 219, 26);
+            background-color: black;
+        } 
+
+
+        /* // univeral selector  we can use ---- * or body */
+
+        * {
+            /* background-color: orange; */
+
+        }
+
+        .pclass {
+
+
+            color: red;
+            /* background-color: black; */
+            font-size: 40px;
+            font-weight: bold;
+            font-style: italic;
+            text-align: start;
+            border: 5px solid rebeccapurple;
+            /* margin : 50px */
+
+            /* margin-top: 100px;
+            margin-left: 100px; */
+
+            /* margin : top right bottom left */
+
+            margin: 100px 0px 50px 20px
+        }
+
+        /* // box model 
+
+
+        
+        
+        */
+
+        #netflix {
+
+            background-image: url('./kolhi.jpg');
+            width: 300px;
+            height: 300px;
+            background-repeat: no-repeat;
+            background-color: black;
+            /* background-position: center; */
+            background-size: cover;
+            /* padding-left: 150px; */
+            /* text-align: center; */
+
+            display: flex;
+
+            /* use justify-content to make center in x-direction */
+            justify-content: center;
+
+            /* use align-items to make center in y-direction */
+
+            align-items: center;
+
+
+
+
+
+
+
+        }
+
+
+        #flex-prop {
+
+
+            display: flex;
+
+            margin-top: 100px;
+            margin-bottom: 100px;
+
+            /* justify-content: center;
+
+            align-items: center; */
+
+        }
+
+        #flex-col{
+
+            display: flex;
+            flex-direction: column;
+
+            /* if you changed the direction of flex, properties also change the direction */
+
+            align-items: center;
+
+            justify-content: center;
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- if u give the styles directly in the html tag then it is known as inner css -->
+    <!-- if u give the styles directly in the style tag of head section then it is known as internal css -->
+
+
+
+    <p style="color : red ; background-color: black;">this is p tag</p>
+
+
+    <div class="sadhik">
+        this is div tag
+    </div>
+
+    <p class="pclass">this is css first class</p>
+
+
+    <b class="sadhik">this is bold tag</b>
+
+
+    <!-- if we give all selectors then it will apply based on the specificity -->
+
+    <!-- inner > id > class > tag  -->
+
+    <h2 id="unique" class="sadhik" style="color: grey;"> this is h2 tag </h2>
+
+
+    <!-- <img src="./kolhi.jpg" alt="kolhi">
+    <h1>netflix</h1> -->
+
+    <div id="netflix">
+
+        <h1>netflix</h1>
+
+
+    </div>
+
+
+    <!-- flex ---- is used for alignment
+
+    when we use flex default direction is row, and it allow childs to be in the row
+     
+    
+    -->
+
+
+
+    <div id="flex-prop">
+
+        <div style="background-color: green; width: 300px; height: 100px;">
+
+            box 1
+
+        </div>
+
+        <div style="background-color: rgb(223, 79, 17); width: 300px; height: 50px;">
+
+            box 2
+        </div>
+
+        <div style="background-color: green; width: 300px; height: 100px;">
+
+            box 3
+
+        </div>
+
+    </div>
+
+
+    <div id="flex-col">
+
+        <span style="background-color: green; width: 300px; height: 100px;">
+
+            box 1
+
+        </span>
+
+        <span style="background-color: rgb(223, 79, 17); width: 300px; height: 50px;">
+
+            box 2
+        </span>
+
+        <span style="background-color: green; width: 300px; height: 100px;">
+
+            box 3
+
+        </span>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+
+<body>
+
+    <h1 id="idselector">element id</h1>
+
+    <p class="classselector">
+        element class
+    </p>
+
+    <span class="classselector">
+        element span class
+    </span>
+
+    <div>
+        element tag
+    </div>
+
+    <div>
+        element tag 2
+    </div>
+
+    <a href="www.google.com">google</a>
+
+    <!-- dom --- document obj model ---- tree like structure -->
+
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+    </ul>
+
+
+    <script>
+        console.log("js is started");
+
+        // 1. accessing the elements in js 
+        //  a. accessing by id
+        //  b. by class
+        //  c. by tagname
+        //  d. queryselector ---- one element only (universal selector where i can access the id, class, tag) 
+        //  e. queryselectorall ---- group (array)
+
+        // 1. using id
+
+        let idselector = document.getElementById("idselector");
+
+        console.log(idselector.innerText, 'id selector');
+
+        idselector.innerText = 'element id text changed using the js';
+
+        let classselector = document.getElementsByClassName('classselector');
+
+        console.log(classselector[0].innerText, 'class selector')
+
+        classselector[0].innerText = 'element c;ls updated'
+
+        let tagselector = document.getElementsByTagName('div')
+
+        tagselector[0].innerText = 'element div 1 updated'
+
+        console.log(tagselector, 'tag')
+
+        // it will give the one result (that too first element)
+        let queryselectorVar = document.querySelector('.classselector');
+
+        console.log(queryselectorVar, 'query variable')
+
+
+        // it will give the all results in a array
+
+        let sadhik = document.querySelectorAll('.classselector')
+
+        console.log(sadhik, 'all')
+
+        let hemanth = document.querySelector('li')
+
+        console.log(hemanth.innerText,'hemanth')
+
+
+        let bhanu = document.querySelectorAll('li')
+
+        console.log(bhanu,'bhanu')
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        console.log("js is ended");
+    </script>
+</body>
+
+</html>
