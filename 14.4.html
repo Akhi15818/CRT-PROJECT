@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>body color</title>
+</head>
+<body>
+    <h1 id="h1tag">body color</h1>
+    <script>
+
+        function changecolor() {
+
+            let h1tag = document.getElementById("h1tag")
+
+            let r = Math.ceil(255 * Math.random());
+
+            let b = Math.ceil(255 * Math.random());
+
+            let g = Math.ceil(255 * Math.random());
+
+            h1tag.style.backgroundColor = `rgb(${r},${g},${b})`
+        }
+        changecolor()
+    </script>
+</body>
+</html>
