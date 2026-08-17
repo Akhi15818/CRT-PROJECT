@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>await</title>
+</head>
+<body>
+    <h1>await </h1>
+    <script>
+        console.log('js is started')
+        async function fetchTodos() {
+            // api call -- application programming interface --- middleperson , which used to contact b/w frontend and backend
+            let response = await fetch("https://jsonplaceholder.typicode.com/todos/");
+            console.log(response, 'res') /// we got the all properties including data
+            let data = await response.json() // convert data into js obj
+            console.log(data,'data')
+        }
+        fetchTodos()
+        console.log('js is ended')
+    </script>
+</body>
+</html>

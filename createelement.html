@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create element</title>
+</head>
+
+<body>
+
+    <h1 id="h1Tag">
+        this is create Element
+
+    </h1>
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+
+
+    <script>
+
+        // we have seen accessing (existing already) the element in the body, and updating the content
+
+        const h1Tag = document.getElementById('h1Tag');
+
+        // let ptag = document.getElementById("pTag");
+
+
+        let pTag = document.createElement('p');
+
+        pTag.innerText = 'ptag created using the js'
+
+        document.body.appendChild(pTag)
+
+
+        let divTag = document.createElement('div');
+
+        divTag.innerHTML = '<b>btag created using js </b>'
+
+        divTag.id = 'sadhik'
+
+        document.body.appendChild(divTag)
+
+
+        console.log(pTag, 'ptag')
+
+        console.log(divTag, 'divtag')
+
+
+
+        // console.log(h1Tag,'h1tag')
+
+    </script>
+</body>
+
+</html>
