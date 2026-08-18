@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+
+<body>
+    <h1> fetching the data from the backend</h1>
+
+    <script>
+
+        console.log('js is started');
+
+        // dealing with api's (application programming interface)
+        let output = fetch("https://jsonplaceholder.typicode.com/todos/")
+
+        // 200 - 299 ---- successful transaction
+
+        // 400 - 499 ---- failure transaction
+
+        output
+            .then(
+                (result) => {
+                    console.log(result, 'result')
+
+                    return result.json()
+                }
+
+            )
+            .then(
+                (data) => {
+                    console.log(data, 'data')
+                }
+            )
+            .catch(
+                (error) => {
+                    console.log(error, 'error')
+                }
+            )
+        console.log(output, 'output')
+        console.log('js is ended')
+    </script>
+
+</body>
+
+</html>

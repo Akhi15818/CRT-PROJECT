@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event listener</title>
+</head>
+<body>
+    
+    <h1>event listener</h1>
+
+    <button id="button">button</button>
+
+    <script>
+
+        let buttonTag = document.getElementById('button');
+
+        // adding the event using the js 
+
+        // addEventListener() is a function which will accept the two parameters , 1.event type, 2. function
+
+        buttonTag.addEventListener('click',function(event) {
+
+            console.log(event,'event')
+        })
+
+
+
+    </script>
+</body>
+</html>
