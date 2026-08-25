@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on change</title>
+</head>
+<body>
+
+    <input type="text" 
+        id="inputTag" 
+        placeholder="username"
+        value="sadhik"
+        onkeyup="handleInput(event)"
+        >
+
+    <script>
+
+        let inputTag = document.getElementById("inputTag")
+
+        console.log(inputTag.value,'input'); // value (data entered by user, will stored in the input value variable)
+
+        // value is a variable which will store the data entered by the user
+        function handleInput(event) {
+            //console.log('fun is called',inputTag.value) // inputtag.value is a way to get the data from the input field
+            console.log(event.target.value,'event') // event taget.value --- is way to get the data stored in the event action
+        }
+
+
+    </script>
+    
+</body>
+</html>
