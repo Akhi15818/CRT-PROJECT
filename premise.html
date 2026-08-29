@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <h1>Promise</h1>
+    <script>
+        // js is interpreter ( runs line by line)
+
+        // is js a single threaded ( at a time it will do one task only) or multithreaded (at a time it will do multiple tasks) ? ---- single threaded
+        // data which is to be get from the other place (ex : getting the data from the backend or database)
+        // console.log('first line')
+        // setTimeout(
+        // () => {
+        //     console.log('this will run after 2 seconds')
+        // }, 4000)
+
+        // what is a promise --- it time taking process (the data is not here) --- i will surely give the data , i don't know whether it failure state or sucessful state
+
+        let output = new Promise((resolve, reject) => {
+
+            let state = true
+
+            if (state) {
+                resolve("this is sucessful")
+            } else {
+                reject("this is a failure")
+            }
+
+        })
+
+        // to retrive the successful data you have to use then function
+        // to get the failure data you have to use the catch
+
+        // output.then(
+        //     (result) => {
+        //         console.log(result,'sucess in then fun')
+        //     }
+        // ).catch(
+        //     (error) => {
+        //         console.log(error,'error in catch fun')
+        //     }
+        // )
+
+
+        output
+            .then(
+
+                // sucessful data
+                (result) => {
+
+                    console.log('result',result)
+
+                }
+
+            )
+            .catch(
+                (error) => {
+                    console.log(error,"error")
+                }
+            )
+        console.log(output, 'output') // promise
+        // console.log(" line after timeout function")
+    </script>
+</body>
+</html>
