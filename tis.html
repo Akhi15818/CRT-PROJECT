@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1>this keyword</h1>
+
+    <script>
+
+        console.log('js is stated')
+
+        var username = 'sadhik'
+
+        console.log(this.username,'this') // this represents the scope where it is used
+
+        if(true) {
+            var age = 100
+
+            console.log(this,'this in the function')
+        }
+
+
+        let obj = {
+
+            carname : "bmw",
+            year : 2025,
+
+            x : function() {
+                console.log(this.carname,'this in the obj')
+            }
+
+        }
+
+
+        obj.x()
+    </script>
+</body>
+</html>
